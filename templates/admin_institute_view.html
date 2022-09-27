@@ -1,0 +1,429 @@
+{% load static %}
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="keywords"
+      content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Matrix lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Matrix admin lite design, Matrix admin lite dashboard bootstrap 5 dashboard template"
+    />
+    <meta
+      name="description"
+      content="Matrix Admin Lite Free Version is powerful and clean admin dashboard template, inpired from Bootstrap Framework"
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Admin</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16"  href="{% static 'assets/images/favicon.png' %}" />
+    <link href="{% static 'assets/libs/flot/css/float-chart.css' %}" rel="stylesheet" />
+    <!-- Custom CSS -->
+   <link href="{% static 'dist/css/style.min.css' %}" rel="stylesheet" />
+   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <style>
+        .modal fade {
+        box-shadow: 0px 0px 20px 20px rgba(255,255,255,1);
+        text-shadow: 0px 0px 10px rgba(51, 51, 51, 0.9);
+        transform: scale(0.9);
+        opacity: 0.6;
+        }
+
+        @media only screen and (max-width: 720px) {
+          #btns{
+            padding-right: 15%;
+          }
+        }
+      </style>
+  </head>
+
+  <body>
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+      <div class="lds-ripple">
+        <div class="lds-pos"></div>
+        <div class="lds-pos"></div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+        $(window).on('load',function(){
+          $('#myModall').modal('show');
+        });
+      </script> 
+
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div
+      id="main-wrapper"
+      data-layout="vertical"
+      data-navbarbg="skin5"
+      data-sidebartype="full"
+      data-sidebar-position="absolute"
+      data-header-position="absolute"
+      data-boxed-layout="full"
+    >
+      <!-- ============================================================== -->
+      <!-- Topbar header - style you can find in pages.scss -->
+      <!-- ============================================================== -->
+      <header class="topbar" data-navbarbg="skin5">
+        <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+          <div class="navbar-header" data-logobg="skin5">
+            <!-- ============================================================== -->
+            <!-- Logo -->
+            <!-- ============================================================== -->
+            <a class="navbar-brand" href="index.html">
+              <!-- Logo icon -->
+              <b class="logo-icon ps-2">
+                <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                <!-- Dark Logo icon -->
+                <img
+                  src="{% static 'assets/images/logo-icon.png' %}"
+                  alt="homepage"
+                  class="light-logo"
+                  width="25"
+                />
+              </b>
+              <!--End Logo icon -->
+              <!-- Logo text -->
+              <span class="logo-text ms-2">
+                <h3 style="color: rgb(248, 123, 7); padding-top:20%;">Admin</h3>
+                <!-- dark Logo text -->
+                <!-- <img
+                  src="{% static 'assets/images/logo-text.png' %}"
+                  alt="homepage"
+                  class="light-logo"
+                /> -->
+              </span>
+              <!-- Logo icon -->
+              <!-- <b class="logo-icon"> -->
+              <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+              <!-- Dark Logo icon -->
+              <!-- <img src="../assets/images/logo-text.png" alt="homepage" class="light-logo" /> -->
+
+              <!-- </b> -->
+              <!--End Logo icon -->
+            </a>
+            <!-- ============================================================== -->
+            <!-- End Logo -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Toggle which is visible on mobile only -->
+            <!-- ============================================================== -->
+            <a
+              class="nav-toggler waves-effect waves-light d-block d-md-none"
+              href="javascript:void(0)"
+              ><i class="ti-menu ti-close"></i
+            ></a>
+          </div>
+          <!-- ============================================================== -->
+          <!-- End Logo -->
+          <!-- ============================================================== -->
+          <div
+            class="navbar-collapse collapse"
+            id="navbarSupportedContent"
+            data-navbarbg="skin5"
+          >
+            <!-- ============================================================== -->
+            <!-- toggle and nav items -->
+            <!-- ============================================================== -->
+            <ul class="navbar-nav float-start me-auto">
+              <li class="nav-item d-none d-lg-block">
+                <a
+                  class="nav-link sidebartoggler waves-effect waves-light"
+                  href="javascript:void(0)"
+                  data-sidebartype="mini-sidebar"
+                  ><i class="mdi mdi-menu font-24"></i
+                ></a>
+              </li>
+            </ul>
+            <!-- ============================================================== -->
+            <!-- Right side toggle and nav items -->
+            <!-- ============================================================== -->
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <ul class="navbar-nav float-end">
+              <!-- ============================================================== -->
+              <!-- Comment -->
+              <!-- ============================================================== -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="mdi mdi-bell font-24"></i>
+                </a>
+                <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul> -->
+              </li>
+              <!-- ============================================================== -->
+              <!-- End Comment -->
+              <!-- ============================================================== -->
+              <!-- ============================================================== -->
+              <!-- Messages -->
+              <!-- ============================================================== -->
+             
+              <!-- ============================================================== -->
+              <!-- End Messages -->
+              <!-- ============================================================== -->
+
+              <!-- ============================================================== -->
+              <!-- User profile and search -->
+              <!-- ============================================================== -->
+             
+                 
+                  <div style="padding-top:8% ; margin-left: 20%;">
+                    <a  href="{% url 'logouts' %}" class="btn btn-warning">
+                    <i class="fa fa-power-off me-1 ms-1"></i> Logout</a>
+                    </div>
+              <!-- ============================================================== -->
+              <!-- User profile and search -->
+              <!-- ============================================================== -->
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- ============================================================== -->
+      <!-- End Topbar header -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- ============================================================== -->
+      <aside class="left-sidebar" data-sidebarbg="skin5">
+        <!-- Sidebar scroll-->
+        <div class="scroll-sidebar">
+          <!-- Sidebar navigation-->
+        
+          <nav class="sidebar-nav">
+            <ul id="sidebarnav" class="pt-4">
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link waves-effect waves-dark sidebar-link"
+                  href="{% url 'admin_dashboard' %}"
+                  aria-expanded="false"
+                  ><i class="mdi mdi-view-dashboard"></i
+                  ><span class="hide-menu">Dashboard</span></a
+                >
+              </li>
+
+
+             <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="{% url 'admin_institute_view' %}"
+                  aria-expanded="false"
+                  ><i class="mdi mdi-receipt"></i
+                  ><span class="hide-menu">Institue </span></a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      
+     
+      <div class="page-wrapper" style="background-image: url('static/assets/images/bag.jpeg'); background-repeat:no-repeat;background-size: cover;">
+
+        <div class="row ">
+            <div class="col-12 grid-margin">
+              <div class="card" style="background-color:white; margin-left: 10%; margin-right: 10%; margin-top: 5%;color: black;" >
+                <div class="card-body">        
+
+                  <h4 class="card-title">Institute Details
+                </h4>
+                <br>
+
+                  <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                    
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                      <div class="modal-header">
+
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <div class="modal-body">
+                        <section class="ftco-section ftco-no-pt ftco-no-pb contact-section">
+                          <div class="card-body">
+                            <h3 class="card-title">Create Institue</h3>
+                            <p class="card-description"> </p>
+                           
+                             <form class="forms-sample" method="post"  enctype="multipart/form-data">
+                                 {% csrf_token %}
+                                 <div class="form-group">
+                                  <label for="exampleInputUsername1"> Name</label>
+                                  <input type="text" name="name" class="form-control"  placeholder="" >
+                                </div>
+                                <div class="form-group">
+                                  <label for="address"> Address</label>
+                                  <input type="text" name="address" class="form-control"   placeholder="" >
+                                </div>
+                                <div class="form-group">
+                                  <label for="contact">Contact</label>
+                                  <input type="tel" name="contact" class="form-control"   placeholder="" >
+                                </div>
+                                <div class="form-group">
+                                  <label for="email">Email</label>
+                                  <input type="email" name="email" class="form-control"   placeholder="" >
+                                </div>
+                                <div class="form-group">
+                                  <label for="exampleInputUsername1"> Designation</label>
+                                  <input type="text" name="desig" class="form-control"   placeholder="" >
+                                </div>
+                                <div class="form-group">
+                                  <label for="exampleInputUsername1"> Username</label>
+                                  <input type="text" name="username" class="form-control"   placeholder="" >
+                                </div>
+                                <div class="form-group">
+                                  <label for="exampleInputUsername1"> password</label>
+                                  <input type="password" name="password" class="form-control"  placeholder="" >
+                                </div>
+                                <div class="form-group">
+                                  <label ><b>Image</b></label>
+                                  <input type="file"  name="im" required>
+                                </div>
+                                    
+                                
+                              <div class="form-check form-check-flat form-check-primary">
+                              <button type="submit" class="btn btn-primary me-2">Create</button>
+                          
+                            </form>
+                          </div>
+                        </section>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                      </div>
+                      
+                    </div>
+                    </div>
+
+                  <div class="form-group">
+                   <div class="row">
+                    <div class="col-sm-6">
+                    <input type="text" class="form-control"id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name" style="width:50%" >
+                  </div>
+                  <div class="col-sm-6" id="btns">
+                    <button type="button" class="btn" style="background-color:rgb(167, 219, 253); margin-left: 70%;" data-toggle="modal" data-target="#myModal">Create New</button>
+                  </div>
+                  </div>
+                  <div class="table-responsive">
+                    <br>
+                    <br>
+                    <table class="table" id="myTable" style="color: black;border:1px solid;">
+                      <thead style="border:1px solid black ;" >
+                        <tr class="header" >
+                          
+                          <th style="color: black;"> Name </th>
+                          <th style="color: black;"> Address </th>
+                          <th style="color: black;"> Contact </th>
+                          <th style="color: black;"> Email </th>
+                         <th style="color: black;"> image </th>
+                         
+                         <th colspan="1">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody> 
+                        {% for i in ins %}
+                        <tr>
+                          <td>{{ i.name }}</td>
+                          <td>{{ i.address }}</td>
+                          <td>{{ i.contact }}</td>
+                          <td>{{ i.email }}</td>
+                          <td>{{ i.image }}</td>
+                          
+                          <td><a href="{% url 'deleteinstitute' ins_id=i.id %}" class="btn btn-danger" onclick="return confirm('Delete ?')">Delete</a></td>
+                        </tr>
+                      {% endfor %}
+                       
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <script>
+function myFunction() {
+var input, filter, table, tr, td, i, txtValue;
+input = document.getElementById("myInput");
+filter = input.value.toUpperCase();
+table = document.getElementById("myTable");
+tr = table.getElementsByTagName("tr");
+for (i = 0; i < tr.length; i++) {
+  td = tr[i].getElementsByTagName("td")[0];
+  if (td) {
+    txtValue = td.textContent || td.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      tr[i].style.display = "";
+    } else {
+      tr[i].style.display = "none";
+    }
+  }       
+}
+}
+</script>
+
+
+        <div class="container-fluid">
+          <div class="row">
+         <footer class="footer text-center">
+          All Rights Reserved by Browzifo-admin. Designed and Developed by
+          <a href="#">Browzifo</a>.
+        </footer>
+      </div>
+    </div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <script src="{% static 'assets/libs/jquery/dist/jquery.min.js' %}"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="{% static 'assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js' %}"></script>
+    <script src="{% static 'assets/extra-libs/sparkline/sparkline.js' %}"></script>
+    <!--Wave Effects -->
+    <script src="{% static 'dist/js/waves.js' %}"></script>
+    <!--Menu sidebar -->
+    <script src="{% static 'dist/js/sidebarmenu.js' %}"></script>
+    <!--Custom JavaScript -->
+    <script src="{% static 'dist/js/custom.min.js' %}"></script>
+    <!--This page JavaScript -->
+    <script src="{% static 'dist/js/pages/dashboards/dashboard1.js' %}"></script>
+    <!-- Charts js Files -->
+    <script src="{% static 'assets/libs/flot/excanvas.js' %}"></script>
+    <script src="{% static 'assets/libs/flot/jquery.flot.js' %}"></script>
+    <script src="{% static 'assets/libs/flot/jquery.flot.pie.js' %}"></script>
+    <script src="{% static 'assets/libs/flot/jquery.flot.time.js' %}"></script>
+    <script src="{% static 'assets/libs/flot/jquery.flot.stack.js' %}"></script>
+    <script src="{% static 'assets/libs/flot/jquery.flot.crosshair.js' %}"></script>
+    <script src="{% static 'assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js' %}"></script>
+    <script src="{% static 'dist/js/pages/chart/chart-page-init.js' %}"></script>
+    <script src="{% static '/assets/js/file-upload.js' %}"></script>
+     
+   
+  </body>
+</html>

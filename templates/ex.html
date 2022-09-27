@@ -1,0 +1,85 @@
+{% extends 'index_student.html' %}
+ {% load static %}
+  {% block content %}
+  <head>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+     
+     <style>
+      .split {
+        height: 100%;
+        width: 50%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        overflow-x: hidden;
+        padding-top: 20px;
+      }
+      
+      .left {
+          
+        left: 0;
+        background-color: #111;
+      }
+      
+      .right {
+        right: 0;
+        background-color:azure;
+      }
+      
+     
+      </style>
+      </head>
+      <body>
+      <div class="split left">
+        <div class="" style="margin-top:15%;margin-left:45%;margin-right:5%;">
+          <h2 style="color: yellow;font:bold;">Course Content</h2>
+          <div class="card" style="font:bold;font-size:20px ;">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Introduction &nbsp;&nbsp;&nbsp;<a href="#"> <span class="glyphicon glyphicon-play" style="float:right;"></span>
+                </a></li>
+                
+                <li class="list-group-item">Part 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"> <span class="glyphicon glyphicon-play" style="float:right;"></span>
+                </a></li>
+                <li class="list-group-item">Part 2 &nbsp;&nbsp;&nbsp;<a href="#"><span class="glyphicon glyphicon-play" style="float:right;"></span>
+                </a></li>
+                <li class="list-group-item">coding challenge1 &nbsp;&nbsp;&nbsp;<a href="#"> <span class="glyphicon glyphicon-play" style="float:right;"></span>
+                </a></li>
+                <li class="list-group-item">Part 3 &nbsp;&nbsp;&nbsp;<a href="#"> <span class="glyphicon glyphicon-play" style="float:right;"></span>
+                </a></li>
+                <li class="list-group-item">Part 4 &nbsp;&nbsp;&nbsp;<a href="#"> <span class="glyphicon glyphicon-play" style="float:right;"></span>
+                </a></li>
+                <li class="list-group-item">Part 5 &nbsp;&nbsp;&nbsp;<a href="#"> <span class="glyphicon glyphicon-play" style="float:right;"></span>
+                </a></li>
+                <li class="list-group-item">Part 6 &nbsp;&nbsp;&nbsp;<a href="#"> <span class="glyphicon glyphicon-play" style="float:right;"></span>
+                </a></li>
+              </ul>
+            </div>
+            <!-- <br> -->
+            <br>
+          
+            <div>
+              <progress id="file" value="32" max="100" style="width:100%;"> 52% </progress>
+              <p style="color:white;">Course Progress</p>
+            </div>
+        </div>
+      </div>    
+      
+      <div class="split right" style="padding-top:10%;padding-left:2% ;">
+          <div class="card" style="width: 40rem;">
+              <iframe src="https://www.youtube.com/embed/pWahNIMRxR0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <div class="card-body">
+                <h5 class="card-title">Note :</h5>
+                <p class="card-text"></p>
+              </div>
+            </div> 
+      </div>
+  
+      </body>
+
+
+{% endblock %}

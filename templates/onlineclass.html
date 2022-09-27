@@ -1,0 +1,61 @@
+{% extends 'index_student.html' %}
+ {% load static %}
+  {% block content %}
+ 
+    <div class="row"> 
+    {% for i in dd %}    
+     <div class="col-sm-4 grid-margin">
+      <div class="card" id="card" style="height:200px;margin-top:15%;margin-left: 8%;margin-right:10%;box-shadow: 5px 10px 8px #888888; background-image: url('static/assets/images/download.jpg'); background-size: cover;">
+      <a href="{{ i.url }}" style="text-decoration: none; color: #f8f9fa;">
+      <div class="card-body">
+        <h4 style="color:black; text-align: start;">Topic - {{i.topic}}</h4>
+        <div class="row">
+          <div class="col-8 col-sm-12 col-xl-8 my-auto">
+              <h5 style="color:black; text-align: start;">Teacher - {{ i.staff_id.name }}</h5>
+            <h6 class=" font-weight-normal"  style="text-align: start;color: rgb(121, 41, 4);">{{ i.date }}</h6>
+            <input type="hidden" id="date" value="{{i.date}}">
+            
+            <h6 class=" font-weight-normal" style="text-align: start;color: rgb(121, 41, 4);">{{ i.stime }} - {{ i.etime }}</h6>
+          <input type="hidden" id="time" value="{{i.etime}}">
+          </div>
+          <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
+            <i class="icon-lg mdi mdi-language-python text-primary ms-auto"></i>
+          </div>
+        </div>
+      </div>
+      </a>
+
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+
+  <!-- <script>
+    setTimeout(() => {
+     m=document.getElementById("card");
+     const mem = document.getElementById("time").value;
+     const mem1 = document.getElementById("date").value;
+     curdate = new Date().getDate()
+     d=new Date(mem1).getDate()
+     curdate1 = new Date().getMonth()
+     d1=new Date(mem1).getMonth()
+     curdate2 = new Date().getFullYear()
+     d2=new Date(mem1).getFullYear()
+     
+    if (d = curdate){
+      return true
+    }
+    else if(curdate1==d1){
+      return true
+    }
+    else if(curdate2==d2){
+      return true
+    }
+    else{
+      alert("expired")
+    }
+   });
+  </script> -->
+
+  {% endblock %}
